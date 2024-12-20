@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Dashboard Container */
+.dashboard {
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+/* Shift Buttons */
+.shift-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shift-btn:hover {
+    background-color: #ff4757;
+    transform: scale(1.1);
+}
+
+/* Seat Map */
+#seat-map {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 800px;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Row Styling */
+.row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Gap between seats */
+}
+
+.row-label {
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffeb3b;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Seat Styling */
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #27ae60; /* Green for available */
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    position: relative;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Booked Seat */
+.seat.booked {
+    background-color: #e74c3c; /* Red for booked */
+    border-color: #c0392b;
+}
+
+/* Seat hover effect */
+.seat.available:hover {
+    background-color: #2ecc71;
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Seat label inside the seat */
+.seat::after {
+    content: attr(data-seat);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .seat {
+        width: 40px;
+        height: 40px;
+        margin: 3px;
+    }
+    
+    .row-label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seat {
+        width: 35px;
+        height: 35px;
+        margin: 3px;
+    }
+
+    .row-label {
+        font-size: 16px;
+    }
+}
+
+/* Animation: Fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

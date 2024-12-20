@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Movie Seat Booking Dashboard</h1>
+
+        <!-- Shift Selection -->
+        <div class="shifts">
+            <button class="shift-btn" id="shift1" onclick="loadSeats('shift1')">Shift 1 - 10:00 AM</button>
+            <button class="shift-btn" id="shift2" onclick="loadSeats('shift2')">Shift 2 - 2:00 PM</button>
+            <button class="shift-btn" id="shift3" onclick="loadSeats('shift3')">Shift 3 - 6:00 PM</button>
+        </div>
+
+        <!-- Seat Map -->
+        <div id="seat-map">
+            <div class="seat-label">Screen</div>
+            <!-- Default layout of 50 seats in 5 rows -->
+            <div class="row">
+                <span class="row-label">A</span>
+                <div class="seat available" data-seat="A1" title="A1"></div>
+                <div class="seat available" data-seat="A2" title="A2"></div>
+                <div class="seat available" data-seat="A3" title="A3"></div>
+                <div class="seat available" data-seat="A4" title="A4"></div>
+                <div class="seat available" data-seat="A5" title="A5"></div>
+                <div class="seat available" data-seat="A6" title="A6"></div>
+                <div class="seat available" data-seat="A7" title="A7"></div>
+                <div class="seat available" data-seat="A8" title="A8"></div>
+                <div class="seat available" data-seat="A9" title="A9"></div>
+                <div class="seat available" data-seat="A10" title="A10"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">B</span>
+                <div class="seat available" data-seat="B1" title="B1"></div>
+                <div class="seat available" data-seat="B2" title="B2"></div>
+                <div class="seat available" data-seat="B3" title="B3"></div>
+                <div class="seat available" data-seat="B4" title="B4"></div>
+                <div class="seat available" data-seat="B5" title="B5"></div>
+                <div class="seat available" data-seat="B6" title="B6"></div>
+                <div class="seat available" data-seat="B7" title="B7"></div>
+                <div class="seat available" data-seat="B8" title="B8"></div>
+                <div class="seat available" data-seat="B9" title="B9"></div>
+                <div class="seat available" data-seat="B10" title="B10"></div>
+            </div>
+
+            <div class="row">
+                <span class="row-label">C</span>
+                <div class="seat available" data-seat="C1" title="C1"></div>
+                <div class="seat available" data-seat="C2" title="C2"></div>
+                <div class="seat available" data-seat="C3" title="C3"></div>
+                <div class="seat available" data-seat="C4" title="C4"></div>
+                <div class="seat available" data-seat="C5" title="C5"></div>
+                <div class="seat available" data-seat="C6" title="C6"></div>
+                <div class="seat available" data-seat="C7" title="C7"></div>
+                <div class="seat available" data-seat="C8" title="C8"></div>
+                <div class="seat available" data-seat="C9" title="C9"></div>
+                <div class="seat available" data-seat="C10" title="C10"></div>
+            </div>
+            <div class="row">
+                <span class="row-label">D</span>
+                <div class="seat available" data-seat="D1" title="D1"></div>
+                <div class="seat available" data-seat="D2" title="D2"></div>
+                <div class="seat available" data-seat="D3" title="D3"></div>
+                <div class="seat available" data-seat="D4" title="D4"></div>
+                <div class="seat available" data-seat="D5" title="D5"></div>
+                <div class="seat available" data-seat="D6" title="D6"></div>
+                <div class="seat available" data-seat="D7" title="D7"></div>
+                <div class="seat available" data-seat="D8" title="D8"></div>
+                <div class="seat available" data-seat="D9" title="D9"></div>
+                <div class="seat available" data-seat="D10" title="D10"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
